@@ -1,11 +1,16 @@
 #!/bin/sh
 set -eu
 
-lb config \
-  --mode debian \
-  --distribution bookworm \
-  --architectures amd64 \
-  --binary-images iso-hybrid \
-  --debian-installer none \
-  --archive-areas "main contrib non-free non-free-firmware" \
-  --bootappend-live "boot=live components username=admin"
+# Use env -i to avoid "Argument list too long" caused by large CI environments
+env -i \
+  HOME=/root \
+  PATH=/usr/sbin:/usr/bin:/sbin:/bin \
+  TERM=linux \
+  lb config \
+    --mode debian \
+    --distribution bookworm \
+    --architectures amd64 \
+    --binary-images iso-hybrid \
+    --debian-installer none \
+    --archive-areas "main contrib non-free non-free-firmware" \
+    --bootappend-live "boot=live components username=admin"

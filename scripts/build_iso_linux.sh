@@ -21,15 +21,17 @@ for item in main.py requirements.txt README.md passenger_data.json data scripts;
     fi
 done
 
+LB="env -i HOME=/root PATH=/usr/sbin:/usr/bin:/sbin:/bin TERM=linux lb"
+
 echo "[3/5] Preparing live-build"
 cd "$LIVE_ROOT"
 
-lb clean --purge
+$LB clean --purge
 chmod +x auto/config config/hooks/live/010-border-control.chroot
 sh auto/config
 
 echo "[4/5] Building ISO"
-lb build
+$LB build
 
 echo "[5/5] Collecting artifact"
 mkdir -p "$APP_ROOT/dist"
