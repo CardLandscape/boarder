@@ -6,7 +6,7 @@ env -i \
   HOME=/root \
   PATH=/usr/sbin:/usr/bin:/sbin:/bin \
   TERM=linux \
-  lb config \
+  lb config noauto \
     --mode debian \
     --distribution bookworm \
     --architectures amd64 \
