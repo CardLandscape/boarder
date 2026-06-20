@@ -23,10 +23,10 @@ done
 
 echo "[3/5] Preparing live-build"
 cd "$LIVE_ROOT"
-chmod +x auto/config config/hooks/live/010-border-control.chroot
 
 lb clean --purge
-./auto/config
+chmod +x auto/config config/hooks/live/010-border-control.chroot
+sh auto/config
 
 echo "[4/5] Building ISO"
 lb build
