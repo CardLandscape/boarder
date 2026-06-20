@@ -28,7 +28,6 @@ cd "$LIVE_ROOT"
 
 $LB clean --purge
 chmod +x auto/config config/hooks/live/010-border-control.chroot
-sh auto/config
 
 echo "[4/5] Building ISO"
 $LB build
