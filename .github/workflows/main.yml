@@ -1,73 +1,82 @@
 name: Build Bootable ISO
-
 on:
 workflow_dispatch:
 push:
 branches:
 - main
-
 jobs:
 build-iso:
 runs-on: ubuntu-24.04
+
 steps:
-  - name: Checkout
-    uses: actions/checkout@v4
+- name: Checkout
+uses: actions/checkout@v4
 
-  - name: Prepare source tree
-    id: prep
-    shell: bash
-    run: |
-      set -euo pipefail
+- name: Prepare source tree
+id: prep
+shell: bash
+run: |
+set -euo pipefail
 
-      rm -rf _src
-      mkdir -p _src
+rm -rf _src
+mkdir -p _src
 
-      ZIP_FILE=""
-      if [ -f "upload-to-github.zip" ]; then
-        ZIP_FILE="upload-to-github.zip"
-      else
-        ZIP_FILE=$(find . -maxdepth 2 -type f -name "*.zip" | head -n 1 || true)
-      fi
+ZIP_FILE=""
+if [ -f "upload-to-github.zip" ]; then
+ZIP_FILE="upload-to-github.zip"
+else
+ZIP_FILE=$(find . -maxdepth 2 -type f -name ".zip" | head -n 1 || true)
+fi
 
-      if [ -n "$ZIP_FILE" ]; then
-        echo "Using zip source: $ZIP_FILE"
-        unzip -q "$ZIP_FILE" -d _src
-      else
-        echo "No zip found, using checked-out repository files"
-        rsync -a --delete --exclude .git ./ _src/
-      fi
+if [ -n "$ZIP_FILE" ]; then
+echo "Using zip source: $ZIP_FILE"
+unzip -q "$ZIP_FILE" -d _src
+else
+echo "No zip found, using checked-out repository files"
+rsync -a --delete --exclude .git ./ _src/
+fi
 
-      PROJECT_ROOT=""
-      if [ -f "_src/main.py" ] && [ -f "_src/scripts/build_iso_linux.sh" ]; then
-        PROJECT_ROOT="_src"
-      elif [ -f "_src/eepiso/main.py" ] && [ -f "_src/eepiso/scripts/build_iso_linux.sh" ]; then
-        PROJECT_ROOT="_src/eepiso"
-      else
-        CANDIDATE=$(find _src -maxdepth 4 -type f -path "*/scripts/build_iso_linux.sh" | head -n 1 || true)
-        if [ -n "$CANDIDATE" ]; then
-          PROJECT_ROOT=$(dirname "$(dirname "$CANDIDATE")")
-        fi
-      fi
+PROJECT_ROOT=""
+if [ -f "_src/main.py" ] && [ -f "_src/scripts/build_iso_linux.sh" ]; then
+PROJECT_ROOT="_src"
+elif [ -f "_src/eepiso/main.py" ] && [ -f "_src/eepiso/scripts/build_iso_linux.sh" ]; then
+PROJECT_ROOT="_src/eepiso"
+else
+CANDIDATE=$(find _src -maxdepth 4 -type f -path "/scripts/build_iso_linux.sh" | head -n 1 || true)
+if [ -n "$CANDIDATE" ]; then
+PROJECT_ROOT=
+(
+d
+i
+r
+n
+a
+m
+e
+"
+(dirname"(dirname "$CANDIDATE")")
+fi
+fi
 
-      if [ -z "$PROJECT_ROOT" ] || [ ! -f "$PROJECT_ROOT/main.py" ]; then
-        echo "Could not locate project root containing [main.py](http://_vscodecontentref_/0) and scripts/build_iso_linux.sh"
-        find _src -maxdepth 5 -type f | sort | head -n 200
-        exit 1
-      fi
+if [ -z "$PROJECT_ROOT" ] || [ ! -f "$PROJECT_ROOT/main.py" ]; then
+echo "Could not locate project root containing main.py and scripts/build_iso_linux.sh"
+find _src -maxdepth 5 -type f | sort | head -n 200
+exit 1
+fi
 
-      echo "project_root=$PROJECT_ROOT" >> "$GITHUB_OUTPUT"
+echo "project_root=$PROJECT_ROOT" >> "$GITHUB_OUTPUT"
 
-  - name: Build ISO
-    shell: bash
-    run: |
-      set -euo pipefail
-      cd "${{ steps.prep.outputs.project_root }}"
-      chmod +x [build_iso_linux.sh](http://_vscodecontentref_/1)
-      [build_iso_linux.sh](http://_vscodecontentref_/2)
+- name: Build ISO
+shell: bash
+run: |
+set -euo pipefail
+cd "${{ steps.prep.outputs.project_root }}"
+chmod +x build_iso_linux.sh
+build_iso_linux.sh
 
-  - name: Upload ISO artifact
-    uses: actions/upload-artifact@v4
-    with:
-      name: border-control-iso
-      path: ${{ steps.prep.outputs.project_root }}/dist/*.iso
-      if-no-files-found: error
+- name: Upload ISO artifact
+uses: actions/upload-artifact@v4
+with:
+name: border-control-iso
+path: ${{ steps.prep.outputs.project_root }}/dist/*.iso
+if-no-files-found: error
