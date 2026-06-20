@@ -1,0 +1,37 @@
+#!/bin/sh
+set -eu
+
+if [ -f /opt/border-control/requirements.txt ]; then
+    python3 -m pip install --break-system-packages -r /opt/border-control/requirements.txt
+fi
+
+cat >/usr/local/bin/start-border-control <<'EOF'
+#!/bin/sh
+set -eu
+
+APP_ROOT=/opt/border-control
+WRITABLE_DIR=/var/lib/border-control
+mkdir -p "$WRITABLE_DIR/data"
+
+exec "$APP_ROOT/scripts/start_linux.sh" --data-dir "$WRITABLE_DIR"
+EOF
+chmod +x /usr/local/bin/start-border-control
+
+cat >/etc/systemd/system/border-control.service <<'EOF'
+[Unit]
+Description=Border Control Terminal UI
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/start-border-control
+Restart=always
+RestartSec=2
+StandardInput=tty-force
+TTYPath=/dev/tty1
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl enable border-control.service

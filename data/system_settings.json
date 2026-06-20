@@ -1,0 +1,20 @@
+{
+  "login_user": "XOAPLUQA",
+  "login_password": "902193",
+  "printer_name": "Microsoft Print to PDF",
+  "print_size": "Custom",
+  "print_size_custom_width": "100",
+  "print_size_custom_height": "150",
+  "page_orientation": "Portrait",
+  "network_mode": "Ethernet",
+  "wifi_ssid": "1",
+  "wifi_password": "1",
+  "ip_mode": "DHCP",
+  "ip_address": "",
+  "subnet_mask": "",
+  "gateway": "",
+  "dns": "",
+  "server_ip": "",
+  "language": "en",
+  "screen_ratio": "4:3"
+}

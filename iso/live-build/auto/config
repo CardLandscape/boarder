@@ -1,0 +1,11 @@
+#!/bin/sh
+set -eu
+
+lb config \
+  --mode debian \
+  --distribution bookworm \
+  --architectures amd64 \
+  --binary-images iso-hybrid \
+  --debian-installer none \
+  --archive-areas "main contrib non-free non-free-firmware" \
+  --bootappend-live "boot=live components username=admin"

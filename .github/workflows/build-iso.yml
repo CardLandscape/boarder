@@ -1,0 +1,27 @@
+name: Build Bootable ISO
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-iso:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build ISO
+        run: |
+          chmod +x scripts/build_iso_linux.sh
+          ./scripts/build_iso_linux.sh
+
+      - name: Upload ISO artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: border-control-iso
+          path: dist/*.iso
+          if-no-files-found: error

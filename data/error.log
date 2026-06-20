@@ -1,0 +1,117 @@
+
+--- 2026-06-17T02:11:02.150193 ---
+Traceback (most recent call last):
+  File "C:\Users\Administrator\desktop\eep\main.py", line 630, in execute_menu
+    self.dialog_register_entry()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\desktop\eep\main.py", line 676, in dialog_register_entry
+    values = self.input_form("Register passenger entry", fields)
+  File "C:\Users\Administrator\desktop\eep\main.py", line 863, in input_form
+    field.draw(win, 3 + idx * 2, 2, active == idx)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\desktop\eep\main.py", line 418, in draw
+    win.addstr(y, x, label, curses.color_pair(3) if active else curses.A_NORMAL)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_curses.error: addwstr() returned ERR
+
+--- 2026-06-17T02:14:16.014596 ---
+Traceback (most recent call last):
+  File "C:\Users\Administrator\desktop\eep\main.py", line 649, in execute_menu
+    self.dialog_register_entry()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\desktop\eep\main.py", line 695, in dialog_register_entry
+    values = self.input_form("Register passenger entry", fields)
+  File "C:\Users\Administrator\desktop\eep\main.py", line 958, in input_form
+    fields[active].handle_key(key)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Administrator\desktop\eep\main.py", line 460, in handle_key
+    index = self.choices.index(self.value)
+ValueError: list.index(x): x not in list
+
+--- 2026-06-17T02:14:34.211818 ---
+Traceback (most recent call last):
+  File "C:\Users\Administrator\desktop\eep\main.py", line 649, in execute_menu
+    self.dialog_register_entry()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\desktop\eep\main.py", line 695, in dialog_register_entry
+    values = self.input_form("Register passenger entry", fields)
+  File "C:\Users\Administrator\desktop\eep\main.py", line 958, in input_form
+    fields[active].handle_key(key)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Administrator\desktop\eep\main.py", line 460, in handle_key
+    index = self.choices.index(self.value)
+ValueError: list.index(x): x not in list
+
+--- 2026-06-17T02:14:43.896117 ---
+Traceback (most recent call last):
+  File "C:\Users\Administrator\desktop\eep\main.py", line 649, in execute_menu
+    self.dialog_register_entry()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\desktop\eep\main.py", line 695, in dialog_register_entry
+    values = self.input_form("Register passenger entry", fields)
+  File "C:\Users\Administrator\desktop\eep\main.py", line 958, in input_form
+    fields[active].handle_key(key)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Administrator\desktop\eep\main.py", line 460, in handle_key
+    index = self.choices.index(self.value)
+ValueError: list.index(x): x not in list
+
+--- 2026-06-17T02:51:03.935476 ---
+Traceback (most recent call last):
+  File "C:\Users\Administrator\desktop\eep\main.py", line 748, in execute_menu
+    self.dialog_register_entry()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\desktop\eep\main.py", line 793, in dialog_register_entry
+    values = self.input_form("Register passenger entry", fields)
+  File "C:\Users\Administrator\desktop\eep\main.py", line 1105, in input_form
+    matches = fuzzy_search_choices(choices, query)
+  File "C:\Users\Administrator\desktop\eep\main.py", line 170, in fuzzy_search_choices
+    matches = difflib.get_close_matches(query, str_choices, n=max_results, cutoff=0.2)
+              ^^^^^^^
+NameError: name 'difflib' is not defined. Did you forget to import 'difflib'?
+
+--- 2026-06-17T02:53:09.507567 ---
+Traceback (most recent call last):
+  File "C:\Users\Administrator\desktop\eep\main.py", line 748, in execute_menu
+    if self.selected == 0:
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\desktop\eep\main.py", line 793, in dialog_register_entry
+    ]
+    
+  File "C:\Users\Administrator\desktop\eep\main.py", line 1105, in input_form
+    choices = fields[active].choices
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\desktop\eep\main.py", line 170, in fuzzy_search_choices
+    mapping[key] = c
+          ~^^^^^~
+NameError: name 'difflib' is not defined. Did you forget to import 'difflib'?
+
+--- 2026-06-20T23:59:43.892756 ---
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\eep\main.py", line 1635, in main
+    curses.wrapper(lambda stdscr: Application(stdscr).run())
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\curses\__init__.py", line 94, in wrapper
+    return func(stdscr, *args, **kwds)
+  File "C:\Users\Administrator\Downloads\eep\main.py", line 1635, in <lambda>
+    curses.wrapper(lambda stdscr: Application(stdscr).run())
+                                  ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\Downloads\eep\main.py", line 779, in run
+    if key == curses.KEY_F(fkey):
+              ^^^^^^^^^^^^
+AttributeError: module 'curses' has no attribute 'KEY_F'. Did you mean: 'KEY_F0'?
+
+--- 2026-06-21T00:01:06.756546 ---
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\eep\main.py", line 1635, in main
+    curses.wrapper(lambda stdscr: Application(stdscr).run())
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\curses\__init__.py", line 94, in wrapper
+    return func(stdscr, *args, **kwds)
+  File "C:\Users\Administrator\Downloads\eep\main.py", line 1635, in <lambda>
+    curses.wrapper(lambda stdscr: Application(stdscr).run())
+                                  ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\Downloads\eep\main.py", line 779, in run
+    if key == curses.KEY_F(fkey):
+              ^^^^^^^^^^^^
+AttributeError: module 'curses' has no attribute 'KEY_F'. Did you mean: 'KEY_F0'?

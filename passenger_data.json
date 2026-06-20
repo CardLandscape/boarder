@@ -1,0 +1,297 @@
+{
+  "documents": [
+    {
+      "document_number": "WQ2103201",
+      "doc_type": "Staff Passport",
+      "name": "ZHENGJIAN YANGBEN",
+      "staff_id": "",
+      "nationality": "EEH",
+      "expiry_date": "2027-06-17",
+      "issuing_company": "",
+      "status": "active"
+    },
+    {
+      "document_number": "S10291111",
+      "doc_type": "02",
+      "name": "TEST TEST",
+      "staff_id": "",
+      "nationality": "HKG",
+      "expiry_date": "2027-10-02",
+      "issuing_company": "",
+      "status": "active"
+    },
+    {
+      "document_number": "STF111001",
+      "doc_type": "01",
+      "name": "1 2",
+      "staff_id": "",
+      "nationality": "CHN",
+      "expiry_date": "2027-06-17",
+      "issuing_company": "SZX",
+      "status": "active"
+    },
+    {
+      "document_number": "S11991111",
+      "doc_type": "02",
+      "name": "2 2",
+      "staff_id": "",
+      "nationality": "MAC",
+      "expiry_date": "2027-06-17",
+      "issuing_company": "MFM",
+      "status": "active"
+    },
+    {
+      "document_number": "STF000001",
+      "doc_type": "01",
+      "name": "q q w",
+      "staff_id": "",
+      "nationality": "CHN",
+      "expiry_date": "2027-06-17",
+      "issuing_company": "BJS",
+      "status": "active"
+    },
+    {
+      "document_number": "S12230120",
+      "doc_type": "02",
+      "name": "AQ JQ",
+      "staff_id": "",
+      "nationality": "CHN",
+      "expiry_date": "2027-06-21",
+      "issuing_company": "SZX",
+      "status": "active"
+    },
+    {
+      "document_number": "S20011100",
+      "doc_type": "02",
+      "name": "ZJE JDJ",
+      "staff_id": "QQQQOWOW",
+      "nationality": "CHE",
+      "expiry_date": "2029-10-29",
+      "issuing_company": "HKG",
+      "status": "active"
+    },
+    {
+      "document_number": "DRUX21111",
+      "doc_type": "05",
+      "name": "DDDD EEEE",
+      "staff_id": "DDDDDDDD",
+      "nationality": "SYC",
+      "expiry_date": "2027-10-20",
+      "issuing_company": "MOW",
+      "status": "active"
+    },
+    {
+      "document_number": "STF302011",
+      "doc_type": "01",
+      "name": "DDQ WEW",
+      "staff_id": "WWQOWOQQ",
+      "nationality": "CHN",
+      "expiry_date": "2029-10-29",
+      "issuing_company": "WUX",
+      "status": "active"
+    }
+  ],
+  "permits": [],
+  "current_passengers": [
+    {
+      "document_number": "S10291111",
+      "doc_type": "02",
+      "name": "TEST TEST",
+      "nationality": "HKG",
+      "entry_mode": "Issue Visit Permit and admit",
+      "permit_id": "",
+      "entry_time": "2026-06-17 10:45:09",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "STF111001",
+      "doc_type": "01",
+      "name": "1 2",
+      "nationality": "CHN",
+      "entry_mode": "Approve stay without Visit Permit",
+      "permit_id": "",
+      "entry_time": "2026-06-17 11:16:13",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "S11991111",
+      "doc_type": "02",
+      "name": "2 2",
+      "nationality": "MAC",
+      "entry_mode": "Approve stay without Visit Permit",
+      "permit_id": "",
+      "entry_time": "2026-06-17 11:16:53",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "STF000001",
+      "doc_type": "01",
+      "name": "q q w",
+      "nationality": "CHN",
+      "entry_mode": "Approve stay without Visit Permit",
+      "permit_id": "",
+      "entry_time": "2026-06-17 11:52:34",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "S12230120",
+      "doc_type": "02",
+      "name": "AQ JQ",
+      "nationality": "CHN",
+      "entry_mode": "Approve stay without Visit Permit",
+      "permit_id": "",
+      "entry_time": "2026-06-21 00:10:29",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "S20011100",
+      "doc_type": "02",
+      "name": "ZJE JDJ",
+      "nationality": "CHE",
+      "entry_mode": "Approve stay without Visit Permit",
+      "permit_id": "",
+      "entry_time": "2026-06-21 01:15:34",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "DRUX21111",
+      "doc_type": "05",
+      "name": "DDDD EEEE",
+      "nationality": "SYC",
+      "entry_mode": "Approve stay without Visit Permit",
+      "permit_id": "",
+      "entry_time": "2026-06-21 01:32:53",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "STF302011",
+      "doc_type": "01",
+      "name": "DDQ WEW",
+      "nationality": "CHN",
+      "entry_mode": "Approve stay without Visit Permit",
+      "permit_id": "",
+      "entry_time": "2026-06-21 01:34:36",
+      "exit_time": "",
+      "status": "present"
+    }
+  ],
+  "logs": [
+    {
+      "document_number": "WQ2103201",
+      "doc_type": "Staff Passport",
+      "name": "ZHENGJIAN YANGBEN",
+      "nationality": "EEH",
+      "entry_mode": "Issue visa and admit",
+      "permit_id": "VISA-1781630912",
+      "entry_time": "2026-06-17 01:28:32",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "S10291111",
+      "doc_type": "02",
+      "name": "TEST TEST",
+      "nationality": "HKG",
+      "entry_mode": "Issue Visit Permit and admit",
+      "permit_id": "",
+      "entry_time": "2026-06-17 10:45:09",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "STF111001",
+      "doc_type": "01",
+      "name": "1 2",
+      "nationality": "CHN",
+      "entry_mode": "Approve stay without Visit Permit",
+      "permit_id": "",
+      "entry_time": "2026-06-17 11:16:13",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "S11991111",
+      "doc_type": "02",
+      "name": "2 2",
+      "nationality": "MAC",
+      "entry_mode": "Approve stay without Visit Permit",
+      "permit_id": "",
+      "entry_time": "2026-06-17 11:16:53",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "WQ2103201",
+      "doc_type": "Staff Passport",
+      "name": "ZHENGJIAN YANGBEN",
+      "nationality": "EEH",
+      "entry_mode": "Issue visa and admit",
+      "permit_id": "VISA-1781630912",
+      "entry_time": "2026-06-17 01:28:32",
+      "exit_time": "2026-06-17 11:17:26",
+      "status": "exited"
+    },
+    {
+      "document_number": "STF000001",
+      "doc_type": "01",
+      "name": "q q w",
+      "nationality": "CHN",
+      "entry_mode": "Approve stay without Visit Permit",
+      "permit_id": "",
+      "entry_time": "2026-06-17 11:52:34",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "S12230120",
+      "doc_type": "02",
+      "name": "AQ JQ",
+      "nationality": "CHN",
+      "entry_mode": "Approve stay without Visit Permit",
+      "permit_id": "",
+      "entry_time": "2026-06-21 00:10:29",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "S20011100",
+      "doc_type": "02",
+      "name": "ZJE JDJ",
+      "nationality": "CHE",
+      "entry_mode": "Approve stay without Visit Permit",
+      "permit_id": "",
+      "entry_time": "2026-06-21 01:15:34",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "DRUX21111",
+      "doc_type": "05",
+      "name": "DDDD EEEE",
+      "nationality": "SYC",
+      "entry_mode": "Approve stay without Visit Permit",
+      "permit_id": "",
+      "entry_time": "2026-06-21 01:32:53",
+      "exit_time": "",
+      "status": "present"
+    },
+    {
+      "document_number": "STF302011",
+      "doc_type": "01",
+      "name": "DDQ WEW",
+      "nationality": "CHN",
+      "entry_mode": "Approve stay without Visit Permit",
+      "permit_id": "",
+      "entry_time": "2026-06-21 01:34:36",
+      "exit_time": "",
+      "status": "present"
+    }
+  ]
+}

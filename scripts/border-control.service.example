@@ -1,0 +1,17 @@
+[Unit]
+Description=Border Control Terminal UI
+After=local-fs.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/border-control
+ExecStart=/opt/border-control/scripts/start_linux.sh
+Restart=on-failure
+RestartSec=2
+TTYPath=/dev/tty1
+StandardInput=tty-force
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
